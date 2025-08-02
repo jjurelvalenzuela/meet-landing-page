@@ -94,6 +94,20 @@ h1 {
   line-height: 1.5;
   padding: 1.5em 0;
 }
+
+/* Features Section */
+.feature-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 0 4em 0;
+}
+
+.feature-img {
+  width: calc(50% - 0.5rem);
+  object-fit: cover;
+  border-radius: 12px;
+}
 /* DIVIDERS */
 .divider {
   display: flex;
