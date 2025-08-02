@@ -6,8 +6,8 @@
   --cyan-300: #8fe3f9;
 
   /* Purple */
-  --purple--600: #855fb1;
-  --purple--300: #d9b8ff;
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
 
   /* Slate */
   --slate-900: #28283d;
@@ -94,6 +94,33 @@ h1 {
   line-height: 1.5;
   padding: 1.5em 0;
 }
+/* DIVIDERS */
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.divider-line {
+  height: 80px;
+  width: 1px;
+  background-color: var(--slate-300);
+}
+
+.divider-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--slate-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate-600);
+  font-weight: var(--weight-black);
+}
+/* BUTTONS */
 .cta-btn {
   display: flex;
   flex-direction: column;
@@ -117,5 +144,5 @@ h1 {
 }
 
 .cta-btn .btn-what {
-  background-color: var(--purple--600);
+  background-color: var(--purple-600);
 }
