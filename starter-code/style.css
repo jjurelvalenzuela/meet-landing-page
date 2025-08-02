@@ -1,0 +1,54 @@
+:root {
+  /* Colors */
+
+  /* Cyan */
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+
+  /* Purple */
+  --purple--600: #855fb1;
+  --purple--300: #d9b8ff;
+
+  /* Slate */
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+
+  /* White */
+  --white: #fafafa;
+
+  /* Typography */
+  --font-family-display: "Red Hat Display", Arial, sans-serif;
+  --weight-black: 900;
+  --weight-medium: 500;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--font-family-display);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
