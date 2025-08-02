@@ -43,6 +43,7 @@ body {
   line-height: 1.5;
   text-align: center;
   color: var(--slate-900);
+  font-weight: var(--weight-medium);
 }
 
 a {
@@ -59,6 +60,12 @@ img {
 .container {
   width: 80%;
   margin: 4em auto;
+}
+
+h2 {
+  font-weight: var(--weight-black);
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
 /* HEADER */
@@ -89,9 +96,7 @@ h1 {
 
 .hero-context {
   font-size: 1rem;
-  font-weight: var(--weight-medium);
   color: var(--slate-600);
-  line-height: 1.5;
   padding: 1.5em 0;
 }
 
@@ -107,6 +112,23 @@ h1 {
   width: calc(50% - 0.5rem);
   object-fit: cover;
   border-radius: 12px;
+}
+
+.feature-label {
+  color: var(--cyan-600);
+  font-weight: var(--weight-black);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+}
+
+.feature-info h2 {
+  padding: 0.5em 0 0 0;
+}
+
+.feature-text {
+  color: var(--slate-600);
+  padding: 2em 0 0 0;
 }
 /* DIVIDERS */
 .divider {
