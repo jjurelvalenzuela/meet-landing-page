@@ -58,9 +58,10 @@ img {
 }
 
 .container {
+  max-width: 100%;
+  min-height: 280px;
   width: 80%;
   margin: 0 auto;
-  max-width: 375px;
   padding: 4em 0;
 }
 
@@ -84,9 +85,10 @@ h2 {
 
 .hero-img {
   position: relative;
-  right: 75px;
   max-width: none;
-  width: 150%;
+  width: 120vw;
+  left: -20vw;
+  height: auto;
 }
 
 h1 {
@@ -97,7 +99,6 @@ h1 {
 }
 
 .hero-context {
-  font-size: 1rem;
   color: var(--slate-600);
   padding: 1.5em 0;
 }
@@ -141,6 +142,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   color: var(--white);
+  margin-top: 7.5em;
 }
 
 .footer-cta::before {
@@ -161,7 +163,6 @@ h1 {
   top: -110px;
   right: 0;
   left: 0;
-  margin: 0 auto;
 }
 
 .footer-text {
@@ -246,4 +247,55 @@ h1 {
 
 .cta-btn .btn-what {
   background-color: var(--purple-600);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero-img {
+    width: 105vw;
+    left: -13vw;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding: 1.5em 0 0 0;
+  }
+
+  .hero-context {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .cta-btn {
+    flex-direction: row;
+    padding: 0 0 3.5em 0;
+  }
+  .feature-img {
+    width: 23%;
+  }
+
+  .feature-label {
+    font-size: 0.875rem;
+  }
+
+  .feature-info h2 {
+    font-size: 2.25rem;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .feature-text {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-cta {
+    background-image: url("./assets/tablet/image-footer.jpg");
+  }
+
+  .footer-cta h2 {
+    font-size: 2.25rem;
+  }
 }
