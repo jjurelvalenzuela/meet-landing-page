@@ -57,18 +57,35 @@ img {
   display: block;
 }
 
+/* Container & Layout */
 .container {
-  max-width: 100%;
+  width: min(80%, 1200px);
   min-height: 280px;
-  width: 80%;
   margin: 0 auto;
   padding: 4em 0;
 }
 
+/* TYPOGRAPHY */
+h1,
 h2 {
-  font-weight: var(--weight-black);
-  font-size: 2rem;
   line-height: 1.1;
+  font-weight: var(--weight-black);
+}
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  padding: 1.2em 0 0 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5);
+}
+
+.feature-label {
+  color: var(--cyan-600);
+  font-weight: var(--weight-black);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
 }
 
 /* HEADER */
@@ -91,11 +108,18 @@ h2 {
   height: auto;
 }
 
-h1 {
-  font-size: 2.5rem;
-  line-height: 1.1;
-  font-weight: var(--weight-black);
-  padding: 1.2em 0 0 0;
+.hero-img-desktop {
+  display: none;
+  max-width: 100%;
+  position: absolute;
+  top: 25%;
+}
+
+.hero .left {
+  left: -25px;
+}
+.hero .right {
+  right: -25px;
 }
 
 .hero-context {
@@ -119,16 +143,9 @@ h1 {
   border-radius: 12px;
 }
 
-.feature-label {
-  color: var(--cyan-600);
-  font-weight: var(--weight-black);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-}
-
 .feature-info h2 {
   padding: 0.5em 0 0 0;
+  margin: 0 auto;
 }
 
 .feature-text {
@@ -201,13 +218,8 @@ h1 {
   z-index: 2;
 }
 /* BUTTONS */
-.cta-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
+
+/* Buttons - base */
 .btn {
   padding: 15px 40px;
   border-radius: 25px;
@@ -216,39 +228,53 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-.cta-btn .btn-download {
+/* CTA Container */
+.cta-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Button Types */
+
+.btn-download {
   background-color: var(--cyan-600);
 }
 
-.cta-btn .btn-download:hover,
-.cta-btn .btn-download:active,
-.cta-btn .btn-download:focus {
-  background-color: #71c0d4;
-}
-
-.footer-cta .btn-download {
+.btn-what {
   background-color: var(--purple-600);
 }
 
-.footer-cta .btn-download:hover,
-.footer-cta .btn-download:active,
-.footer-cta .btn-download:focus,
-.cta-btn .btn-what:hover,
-.cta-btn .btn-what:active,
-.cta-btn .btn-what:focus {
-  background-color: #b18bdd;
+/* Version Control */
+.version {
+  color: var(--cyan-300);
 }
 
-.cta-btn .version {
-  color: var(--cyan-300);
+/* Footers Modifier */
+.footer-cta .btn-download {
+  background-color: var(--purple-600);
 }
 
 .footer-cta .version {
   color: var(--purple-300);
 }
 
-.cta-btn .btn-what {
-  background-color: var(--purple-600);
+/* Hover/ focus/ active states */
+.btn-download:hover,
+.btn-download:active,
+.btn-download:focus {
+  background-color: #71c0d4;
+}
+
+.footer-cta .btn-download:hover,
+.footer-cta .btn-download:active,
+.footer-cta .btn-download:focus,
+.btn-what:hover,
+.btn-what:active,
+.btn-what:focus {
+  background-color: #b18bdd;
 }
 
 @media (min-width: 768px) {
@@ -286,7 +312,6 @@ h1 {
   .feature-info h2 {
     font-size: 2.25rem;
     max-width: 75%;
-    margin: 0 auto;
   }
   .feature-text {
     max-width: 80%;
@@ -306,9 +331,6 @@ h1 {
   .container {
     max-width: 1200px;
   }
-  .hero {
-    position: relative;
-  }
 
   h1 {
     font-size: 4rem;
@@ -323,18 +345,7 @@ h1 {
   }
 
   .hero-img-desktop {
-    max-width: 100%;
-    position: absolute;
-  }
-
-  .hero .left {
-    top: 25%;
-    left: -25px;
-    right: 0;
-  }
-  .hero .right {
-    top: 25%;
-    right: -25px;
+    display: block;
   }
 
   .feature-img {
@@ -354,7 +365,7 @@ h1 {
     background-image: url("./assets/desktop/image-footer.jpg");
   }
 
-  .footer-cta .footer-cta-row {
+  .footer-cta-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
